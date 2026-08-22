@@ -1,0 +1,62 @@
+			Section 1: Pseudocode Problems
+
+
+
+PC-1: Prime Number Checker
+
+Pseudocode
+START
+
+
+INPUT N
+IF N <= 1 THEN
+    PRINT "Not Prime"
+    STOP
+END IF
+FOR i = 2 TO sqrt(N)
+    IF N MOD i == 0 THEN
+        PRINT "Not Prime"
+        STOP
+    END IF
+END FOR
+PRINT "Prime"
+END
+
+
+Example 1
+N = 61
+i = 2 → 61 MOD 2 ≠ 0
+i = 3 → 61 MOD 3 ≠ 0
+i = 4 → 61 MOD 4 ≠ 0
+i = 5 → 61 MOD 5 ≠ 0
+i = 6 → 61 MOD 6 ≠ 0
+i = 7 → 61 MOD 7 ≠ 0
+sqrt(61) ≈ 7.8
+
+No factor found
+Output: Prime
+
+
+PC-2: Number Digit Reversal
+
+
+Pseudocode
+
+START
+INPUT N
+reverse = 0
+WHILE N > 0
+    digit = N MOD 10
+    reverse = reverse * 10 + digit
+    N = N / 10
+END WHILE
+PRINT reverse
+END
+
+
+Example 2
+
+N = 806
+digit = 6 → reverse = 6
+digit = 0 → reverse = 60
+digit = 8 → reverse = 608

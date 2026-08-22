@@ -1,0 +1,88 @@
+		  Section 3: Time Complexity Problems
+
+
+
+
+TC-1: Linear Search Time Complexity
+
+1. Best Case
+
+Target:8
+Array:8  61  2  3  4  0
+
+The target is found at the first position.
+Only 1 comparison is required.
+Therefore: Best Case = O(1)
+
+Explanation
+The algorithm finishes immediately when the first element is the target.
+
+2. Worst Case
+
+Target:0
+Array:8 → 61 → 2 → 3 → 4 → 0
+We have to check all 6 elements.
+For an array of size N, we may need N comparisons.
+
+Therefore: Worst Case = O(N)
+
+The same happens if the target is not present, for example:
+Target = 5
+All elements must be checked.
+
+| Case    | Time Complexity |
+| ------- | --------------- |
+| Best    | `O(1)`          |
+| Average | `O(N)`          |
+| Worst   | `O(N)`          |
+
+
+
+
+TC-2: Iterative Binary Search Complexity
+
+Sorted array: {0, 2, 3, 4, 8, 61}
+
+Target:4
+Binary Search repeatedly divides the search range into half.
+
+Worst Case Mathematical Equation
+
+At every step, the search space becomes half.
+
+N
+N/2
+N/4
+N/8
+N/16
+...
+
+Best Case  = O(1)
+Worst Case = O(log N)
+Average    = O(log N)
+
+
+
+TC-3: Merge Sort Time Complexity
+
+Sample array: {8, 61, 2, 3, 4, 0}
+
+Merge Sort follows: Divide → Divide → Divide → Merge → Merge
+
+2. Recurrence Relation
+
+For Merge Sort: T(N) = 2T(N/2) + O(N)
+
+Level 0:       N                 → O(N)
+Level 1:      N/2 + N/2          → O(N)
+Level 2:    N/4 + N/4 + ...      → O(N)
+Level 3:          ...            → O(N)
+
+
+Final Answer
+Merge Sort Time Complexity = O(N log N)
+
+For Merge Sort:
+Best Case  = O(N log N)
+Average    = O(N log N)
+Worst Case = O(N log N)

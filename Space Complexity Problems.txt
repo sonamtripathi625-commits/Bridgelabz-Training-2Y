@@ -1,0 +1,56 @@
+                Section 4: Space Complexity Problems
+
+
+
+SC-1: Linear Search Space Complexity
+
+Array: {8, 61, 2, 3, 4, 0}
+
+Iterative Linear Search only needs a few variables such as: i
+target It does not create another array.
+Therefore, the auxiliary space remains constant regardless of N.
+
+Auxiliary Space = O(1)
+
+Explanation:
+
+Even if the array has:
+10 elements
+100 elements
+1,000,000 elements
+
+we still only need a few variables.
+
+Answer: Linear Search Space Complexity = O(1)
+
+
+SC-2: Binary Search Space Complexity
+
+For Iterative Binary Search, we use variables such as:
+low
+high
+mid
+
+No additional array is created.
+Therefore:
+Auxiliary Space = O(1)
+
+Answer: Iterative Binary Search Space Complexity = O(1)
+
+
+
+SC-3: Merge Sort Space Complexity
+
+Merge Sort requires additional memory during the merge operation.
+
+For example:
+Left array:  {2, 8, 61}
+Right array: {0, 3, 4}
+
+While merging, we need temporary storage to combine them:
+
+Temporary array: {0, 2, 3, 4, 8, 61}
+
+For N elements, the temporary array can contain approximately N elements.
+
+Therefore: Auxiliary Space = O(N)
